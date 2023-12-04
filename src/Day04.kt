@@ -31,6 +31,8 @@ fun main() {
     }.toMutableMap()
 
     // loop to determine how many winners we have and what cards we need to add
+    // Note to self: this is a horrible way to do this, should have probably mapped the one
+    // card to a count of the number of that specific card we have, then looped over that
     cardSet.keys.forEach { cardId ->
       val cards = cardSet[cardId] ?: listOf()
       cards.forEach { card ->
